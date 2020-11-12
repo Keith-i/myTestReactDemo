@@ -1,0 +1,9 @@
+.normalcolor {
+    background-color: #e2e2e2;
+    color: blueviolet;
+    border-radius: none;
+    /* border: none; */
+}
+.normalcolor:focus {
+    outline:none;
+}

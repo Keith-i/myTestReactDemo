@@ -2,14 +2,14 @@ import logo from './logo.svg';
 import './App.css';
 import MyCom from './components/myCom'
 import { Button } from 'antd'
+import ParentCom from './components/ParentCom'
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <MyCom name="小明" />
-        <MyCom name="小红" />
+        <MyCom name="小明" age="18" />
         <Button type="primary">Button</Button>
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -22,6 +22,7 @@ function App() {
         >
           Learn React
         </a>
+        <ParentCom />
       </header>
     </div>
   );
