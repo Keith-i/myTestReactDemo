@@ -2,7 +2,6 @@ import React from 'react'
 import './style/all.css'
 
 function Txt(props) {
-  console.log(props, '+++')
   const sty = {
     color: 'red',
     fontSize: '18px'

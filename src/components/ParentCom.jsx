@@ -6,7 +6,9 @@ class ParentCom extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      isActive: true
+      isActive: true,
+      fatherData: '我是父数据',
+      nowData: '123'
     }
   }
 
@@ -16,12 +18,33 @@ class ParentCom extends React.Component {
     })
   }
 
+  setFatherData = (data) => {
+    this.setState({
+      fatherData: data
+    })
+  }
+
+  setData = (val, e) => {
+    console.log(val, e)
+    this.setState({
+      nowData: val
+    })
+  }
+
+  normalEvent = (e) => {
+    console.log(e)
+    e.preventDefault()
+  }
+
   render() {
     return (
       <div>
-        <div>父组件</div>
-        <ChildrenCom {...this.state} />
-        <Button type="primary" onClick={this.setNewActive}>父改变值</Button>
+        <div>当前值是：{this.state.nowData}</div>
+        <div>父组件：{this.state.fatherData}</div>
+        <Button type="primary" onClick={this.setNewActive}>父改变子值</Button>
+        <Button onClick={(e) => {this.setData('abc', e)}}>改变当前值变成abc</Button>
+        <a href='http://www.baidu.com' onClick={this.normalEvent}>百度</a>
+        <ChildrenCom {...this.state} setFatherData={this.setFatherData} />
       </div>
     )
   }

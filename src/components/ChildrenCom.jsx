@@ -1,4 +1,6 @@
 import React from 'react'
+import { Button } from 'antd'
+
 
 class ChildrenCom extends React.Component {
   constructor(props) {
@@ -6,19 +8,21 @@ class ChildrenCom extends React.Component {
     // console.log(props)
   }
   k = () => {
-    console.log(this)
     if (this.props.isActive) {
-      return <div>对的</div>
+      return <span>对的</span>
     } else {
-      return <div>错的</div>
+      return <span>错的</span>
     }
+  }
+  sendData = () => {
+    this.props.setFatherData('我是子传父的数据')
   }
   render() {
     return (
       <div>
         <div>
-          <div>子组件</div>
-          {this.k()}
+          <div>子组件：{this.k()}</div>
+          <Button type='primary' onClick={this.sendData}>子改变父的值</Button>
         </div>
       </div>
     )
