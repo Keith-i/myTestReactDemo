@@ -5,11 +5,13 @@ import { Button } from 'antd'
 import ParentCom from './components/ParentCom'
 import Judge from './components/judge'
 import AjaxDemoCom from './components/AjaxDemoCom'
+import ComLife from './components/ComLife'
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <ComLife test='sss' />
         <AjaxDemoCom />
         <Judge />
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
