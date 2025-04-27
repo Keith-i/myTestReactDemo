@@ -7,7 +7,7 @@ function Txt(props) {
     fontSize: '18px'
   }
   return (
-    <div style={sty}>测试：A44</div>
+    <div style={sty}>测试：A55</div>
   )
 }
 
